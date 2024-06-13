@@ -1,16 +1,18 @@
 const initHeader = () => {
   const menu = document.querySelector("[data-menu]");
   const menuButton = document.querySelector("[data-menu-toggle]");
+  const clMenuOpened = "header__menu--opened";
+  const clButtonCollapsed = "header__toggle--collapsed";
 
   if (menu && menuButton) {
     menuButton.addEventListener("click", () => {
-      if (menu.classList.contains("header__menu--opened")) {
-        menu.classList.remove("header__menu--opened");
-        menuButton.classList.remove("header__toggle--collapsed");
+      if (menu.classList.contains(clMenuOpened)) {
+        menu.classList.remove(clMenuOpened);
+        menuButton.classList.remove(clButtonCollapsed);
         return;
       }
-      menu.classList.add("header__menu--opened");
-      menuButton.classList.add("header__toggle--collapsed");
+      menu.classList.add(clMenuOpened);
+      menuButton.classList.add(clButtonCollapsed);
     });
   }
 };
