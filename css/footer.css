@@ -1,0 +1,29 @@
+.footer {
+  background-color: #34547a;
+  color: white;
+  height: 150px;
+}
+
+.footer__layout {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.footer__title {
+  font-size: 21px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.footer__copyright {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.footer__socials__list {
+  column-gap: 22px;
+  display: flex;
+  list-style: none;
+}

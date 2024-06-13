@@ -1,0 +1,37 @@
+.partners {
+  height: 290px;
+}
+
+.partners__list {
+  align-items: center;
+  column-gap: 30px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .partners {
+    height: 130px;
+  }
+
+  .partners__list {
+    column-gap: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners {
+    height: auto;
+    padding-block: 20px;
+  }
+
+  .partners__list {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  .partners__item {
+    flex-basis: calc(50% - 15px);
+  }
+}

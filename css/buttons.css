@@ -1,0 +1,23 @@
+.button {
+  appearance: none;
+  background-color: #34547a;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 16px;
+  height: 65px;
+  letter-spacing: 2px;
+  min-width: 225px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 15px;
+    height: 55px;
+    min-width: 190px;
+    padding-inline: 8px;
+  }
+}

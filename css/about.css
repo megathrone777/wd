@@ -1,0 +1,25 @@
+.about {
+  margin-inline: auto;
+  max-width: 540px;
+  padding-block: 120px 100px;
+  text-align: center;
+}
+
+.about__title {
+  color: black;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.about__text {
+  color: #727272;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding-block: 45px 60px;
+  }
+}

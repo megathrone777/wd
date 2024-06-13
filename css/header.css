@@ -1,0 +1,132 @@
+.header {
+  background-color: #eeeff1;
+  height: 175px;
+}
+
+.header__layout {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 3;
+}
+
+.header__menu__list {
+  display: flex;
+  list-style: none;
+  column-gap: 42px;
+}
+
+.header__menu__link {
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.header__menu__link:hover,
+.header__menu__link--active {
+  color: #34547a;
+  text-shadow: 0 0 1px #34547a;
+}
+
+.header__toggle {
+  background-color: transparent;
+  border: none;
+  height: 36px;
+  display: none;
+  position: relative;
+  width: 47px;
+  z-index: 3;
+}
+
+.header__toggle__line {
+  background-color: #34547a;
+  border-radius: 3px;
+  position: absolute;
+  height: 4px;
+  transition: transform 0.2s ease-in;
+  width: 100%;
+}
+
+.header__toggle__line:nth-of-type(2) {
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.header__toggle__line:last-of-type {
+  bottom: 0;
+}
+
+.header__toggle--collapsed > .header__toggle__line:first-of-type {
+  display: none;
+}
+
+.header__toggle--collapsed > .header__toggle__line:nth-of-type(2) {
+  transform-origin: center center;
+  transform: rotate(45deg);
+}
+
+.header__toggle--collapsed > .header__toggle__line:last-of-type {
+  transform: rotate(-45deg);
+  top: 50%;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    height: 90px;
+  }
+
+  .header__menu__list {
+    column-gap: 35px;
+  }
+
+  .header__menu__link {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    transition-duration: 0.2s;
+    transition-property: opacity, visibility;
+    transition-timing-function: ease-in;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .header__menu--opened {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header__menu__list {
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    row-gap: 30px;
+  }
+
+  .header__menu__link {
+    font-size: 32px;
+  }
+
+  .header__toggle {
+    display: flex;
+  }
+}

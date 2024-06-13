@@ -1,0 +1,97 @@
+.contact {
+  background-color: #eeeff1;
+  padding-block: 100px;
+  text-align: center;
+}
+
+.contact__layout {
+  margin-inline: auto;
+  max-width: 540px;
+}
+
+.contact__title {
+  color: black;
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.contact__text {
+  color: #727272;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 60px;
+}
+
+.contact__form {
+  gap: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact__form__item {
+  flex-basis: calc(50% - 15px);
+}
+
+.contact__form__message {
+  flex-basis: 100%;
+  margin-bottom: 30px;
+}
+
+.contact__form__input,
+.contact__form__textarea {
+  appearance: none;
+  background-color: white;
+  border: none;
+  color: black;
+  font: 14px "Roboto", sans-serif;
+  padding-inline: 20px;
+  width: 100%;
+}
+
+.contact__form__input::-webkit-input-placeholder,
+.contact__form__textarea::-webkit-input-placeholder {
+  color: #5f5d5d;
+}
+
+.contact__form__textarea {
+  min-height: 75px;
+  padding-block: 12px;
+  resize: vertical;
+}
+
+.contact__form__input:focus,
+.contact__form__textarea:focus {
+  outline: none;
+}
+
+.contact__form__input {
+  height: 50px;
+}
+
+.contact__form__textarea {
+  height: 175px;
+}
+
+.contact__form__submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    padding-block: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact__form {
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .contact__form__item {
+    flex-basis: calc(50% - 8px);
+  }
+}

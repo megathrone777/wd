@@ -1,0 +1,41 @@
+@import "typography.css";
+@import "buttons.css";
+@import "header.css";
+@import "intro.css";
+@import "about.css";
+@import "projects.css";
+@import "skills.css";
+@import "preview.css";
+@import "folio.css";
+@import "partners.css";
+@import "contact.css";
+@import "footer.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  height: 100%;
+  margin-inline: auto;
+  max-width: 1150px;
+  padding-inline: 10px;
+  position: relative;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 15px;
+  }
+}

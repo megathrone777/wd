@@ -1,0 +1,56 @@
+.folio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-inline: auto;
+  max-width: 1980px;
+}
+
+.folio__item {
+  flex-basis: 25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.folio__item__link {
+  display: block;
+  height: 100%;
+}
+
+.folio__item__link::before {
+  background-color: rgba(52, 84, 122, 0.8);
+  background-image: url(../images/folio_icon.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.15s ease-in-out;
+  width: 100%;
+  will-change: transform;
+}
+
+.folio__item__link:hover::before {
+  transform: translate3d(0, 0, 0);
+}
+
+.folio__item__image {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .folio__item {
+    flex-basis: 33.3333%;
+  }
+}
+
+@media (max-width: 640px) {
+  .folio__item {
+    flex-basis: 50%;
+  }
+}
