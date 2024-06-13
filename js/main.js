@@ -65,17 +65,18 @@ const initSkills = () => {
   if (skillsSection && progressBarElements && !!progressBarElements.length) {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          progressBarElements.forEach((item) => {
-            const percentage = item.getAttribute("data-progress");
+        entries.forEach(({ isIntersecting }) => {
+          if (isIntersecting) {
+            progressBarElements.forEach((item) => {
+              const percentage = item.getAttribute("data-progress");
 
-            item.style.width = `${percentage}%`;
-          });
-        }
+              item.style.width = `${percentage}%`;
+            });
+          }
+        });
       },
       {
         rootMargin: "-400px",
-        threshold: 0.000001,
       }
     );
 

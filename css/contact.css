@@ -92,6 +92,6 @@
   }
 
   .contact__form__item {
-    flex-basis: calc(50% - 8px);
+    flex-basis: 100%;
   }
 }
