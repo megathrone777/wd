@@ -11,7 +11,19 @@ const initHeader = () => {
       }
       menu.classList.add("header__menu--opened");
       menuButton.classList.add("header__toggle--collapsed");
+    });
+  }
+};
 
+const initIntro = () => {
+  const contactSection = document.getElementById("contact");
+  const buttonElement = document.querySelector("[data-intro-toggle]");
+
+  if (contactSection && buttonElement) {
+    buttonElement.addEventListener("click", () => {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+      });
     });
   }
 };
@@ -63,6 +75,7 @@ const initSkills = () => {
       },
       {
         rootMargin: "-400px",
+        threshold: 0.000001,
       }
     );
 
@@ -72,7 +85,8 @@ const initSkills = () => {
 
 window.onload = () => {
   initHeader();
-  initFooter();
+  initIntro();
   initPreview();
   initSkills();
+  initFooter();
 };
